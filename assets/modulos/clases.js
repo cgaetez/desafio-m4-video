@@ -22,7 +22,6 @@ class Multimedia{
 }
 
 
-
     class Reproductor extends Multimedia{
         constructor(url,id){
             super(url);
@@ -31,7 +30,7 @@ class Multimedia{
                 moduloMultimedia.changeVideo(this._id, this._id)
             }
 
-            this.setInicio(time) {
+            this.setInicio(time) = function(){
                 let src = `${this.url}?start=${time}`;
                 this.id.setAtribute("src", src);
             }
@@ -46,6 +45,7 @@ iframe, para así poder mostrar los videos en el documento HTML. Dato:
 puedes utilizar la instrucción “setAttribute” para manipular el DOM.*/
 
         var moduloMultimedia = (function() {
+            
             function changeIframeVideo(url,id){
             document.getElementById(id).setAttribute('src',url);
             }
@@ -55,12 +55,9 @@ puedes utilizar la instrucción “setAttribute” para manipular el DOM.*/
             }
             return {
             changeVideo: changeVideo
-        }
-        
+            }      
         })();
-
-
-
+   
 
 
 export{ Multimedia, Reproductor}
