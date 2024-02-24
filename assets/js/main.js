@@ -1,9 +1,9 @@
-import { Multimedia, Reproductor } from "../modulos/clases.js";
+import {Reproductor } from "../modulos/clases.js";
 
 
 
 let musica = new Reproductor(
-    "https://www.youtube.com/embed/FJfFZqTlWrQ?si=0EXqluW-MfSB-HOv",
+    "https://www.youtube.com/embed/Y9sXv_UekNE",
     "musica"
   );
 
@@ -11,7 +11,7 @@ musica.playMultimedia();
 musica.setInicio(4);
 
 let peliculas = new Reproductor(
-    "https://www.youtube.com/embed/b_D3ysY_QCA?si=8MK27KPP8gsHTqwj",
+    "https://www.youtube.com/embed/b_D3ysY_QCA",
     "peliculas"
   );
 
@@ -19,7 +19,7 @@ let peliculas = new Reproductor(
   peliculas.setInicio(12);
 
   let series = new Reproductor(
-    "https://www.youtube.com/embed/KKziOmsJxzE?si=WKFRLPC8lx6g3HCK",
+    "https://www.youtube.com/embed/KKziOmsJxzE",
     "series"
   );
 

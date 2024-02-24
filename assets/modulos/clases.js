@@ -7,8 +7,7 @@
 */
 class Multimedia{
 
-    constructor(){
-        let url = '';
+    constructor(url){
         this._url = url;
     }
     get url(){
@@ -16,8 +15,8 @@ class Multimedia{
     }
     setInicio(){
         let mensaje = 'Este método es para realizar un cambio en la URL del video';
-        return mensaje;
         console.log(mensaje);
+        return mensaje;
     }
 }
 
@@ -26,15 +25,14 @@ class Multimedia{
         constructor(url,id){
             super(url);
             this._id = id;
-            this.playMultimedia = function(){
-                moduloMultimedia.changeVideo(this._id, this._id)
-            }
-
-            this.setInicio(time) = function(){
-                let src = `${this.url}?start=${time}`;
-                this.id.setAtribute("src", src);
-            }
-        }  
+        } 
+        playMultimedia(){
+            moduloMultimedia.changeVideo(this._url,this._id);
+        } 
+        setInicio(time){
+            let src = `${this.url}?start=${time}`;
+            moduloMultimedia.changeVideo(src, this._id);
+        }
     }
 
     //Implementar el Patrón Módulo mediante IIFE, en donde:
@@ -60,7 +58,7 @@ puedes utilizar la instrucción “setAttribute” para manipular el DOM.*/
    
 
 
-export{ Multimedia, Reproductor}
+export{ Multimedia, Reproductor, moduloMultimedia}
 
 
  
